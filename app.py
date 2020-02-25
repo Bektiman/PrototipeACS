@@ -78,17 +78,17 @@ def main():
 			vect_text = [stmwrd]
 			st.text("Preposesing Text:\n{}".format(vect_text))
 			if model_choice == 'LR':
-				predictor = load_prediction_models("models/modelLR.pkl")
+				predictor = load_prediction_models("modelLR.pkl")
 				prediction = predictor.predict(vect_text)
 				result = int(prediction[0])
 				#st.write(result)
 			elif model_choice == 'RFOREST':
-				predictor = load_prediction_models("models/modelRF.pkl")
+				predictor = load_prediction_models("modelRF.pkl")
 				prediction = predictor.predict(vect_text)
 				result = int(prediction[0])
 				# st.write(prediction)
 			elif model_choice == 'NB':
-				predictor = load_prediction_models("models/modelNB.pkl")
+				predictor = load_prediction_models("modelNB.pkl")
 				prediction = predictor.predict(vect_text)
 				result = int(prediction[0])
 				# st.write(prediction)
@@ -105,7 +105,7 @@ def main():
 			#st.text('{}'.format(X))
 			if st.button("BatchClassiy"):
 			
-				predictor = load_prediction_models("models/modelLR.pkl")
+				predictor = load_prediction_models("modelLR.pkl")
 				prediction = predictor.predict(X)
 				result = prediction
 				#st.write(result)
